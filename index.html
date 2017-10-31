@@ -4,28 +4,30 @@
 	<meta charset="utf-8">
 </head>
 <body>
-	<form>
+	<form method="GET">
 		<p>
-			<label for="">Nombre:</label>
-			<input type="text" name="first_name" required />
+			<label for="first_name">Nombre:</label>
+			<input type="text" name="first_name" id="first_name" required >
 		</p>
 
 		<p>
 			<label for="">Apellidos:</label>
-			<input type="text" name="last_name" required />
+			<input type="text" name="last_name" required >
 		</p>
 
 		<p>
 			<label for="">Sexo:</label>
-			<input type="radio" name="gender"/> Femenino
-			<input type="radio" name="gender"/> Masculino
+			<input type="radio" name="gender" value="F" id="Femenino" >
+			<label for="femenino">Femenino</label>
+			<input type="radio" name="gender" value="M" id="Masculino" >
+			<label for="masculino">Masculino</label>
 		</p>
 
 		<p>
 			<label for="">Intereses:</label>
-			<input type="checkbox" name="interest"/> Tecnologia
-			<input type="checkbox" name="interest"/> Deportes
-			<input type="checkbox" name="interest"/> Desarrollo
+			<input type="checkbox" name="interest" > Tecnologia
+			<input type="checkbox" name="interest" > Deportes
+			<input type="checkbox" name="interest" > Desarrollo
 		</p>
 
 
