@@ -7,24 +7,47 @@ $(document).ready(function () {
     event.preventDefault();
 
     var first_name = $('#first_name').val();
+    var full_name = $('#full_name').val();
+    var gender = $('input[name="gender"]:checked').val();
+    var interest = $('input[name="interest"]:checked');
+    var interests = new Array();
 
-    $.ajax('find.html', {
-      method: 'post',
-      data: {
-        'first_name': first_name
-      }
+    for (var i = 0;i < interest.length; i++) {
+      var temp_interest = interest[i];
+      interests.push(temp_interest.value);
+    }
 
+
+    var payload = {
+      'first_name' : first_name,
+      'full_name' : full_name,
+      'gender' : gender,
+      'interests' : interests
+    }
+
+    $.post("find.html", payload);
+
+
+    /*
+
+
+    $.get('find.html', {
+      'first_name' : first_name,
+      'full_name' : full_name,
+      'gender' : gender,
+      'interest' : interest
     });
 
-    var full_name = $('#full_name').val();
-     $.post('find.html', {'full_name' : full_name});
+    $.post('find.html', {
+      'first_name' : first_name,
+      'full_name' : full_name,
+      'gender' : gender,
+      'interest' : interest
+    });*/
 
-    var gender = $('input[name="gender"]:checked').val();
-    $.post('find.html', {'gender' : gender});
 
-    var interest = $('input[name="interest"]:checked').val();
-    $.post('find.html', {'interest' : interest});
 
   });
 
 });
+
