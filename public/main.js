@@ -25,8 +25,7 @@ $(document).ready(function () {
       'interests' : interests
     }
 
-    $.post("find.html", payload);
-
+    $.get("/find", payload);
 
     /*
 
