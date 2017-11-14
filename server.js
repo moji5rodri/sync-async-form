@@ -9,8 +9,8 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.get("/find", (request, response) => {
-    console.log(request.body.first_name);
-    console.log(request.body.full_name);
+    console.log(request.query.first_name);
+    console.log(request.query.full_name);
     
     response.json({"method": "get", "success": true});
     
