@@ -17,7 +17,6 @@ $(document).ready(function () {
     });
 
     var full_name = $('#full_name').val();
-    /*--version abreviada--*/
      $.post('find.html', {'full_name' : full_name});
 
     var gender = $('input[name="gender"]:checked').val();
@@ -26,9 +25,6 @@ $(document).ready(function () {
     var interest = $('input[name="interest"]:checked').val();
     $.post('find.html', {'interest' : interest});
 
-
-
   });
-
 
 });
